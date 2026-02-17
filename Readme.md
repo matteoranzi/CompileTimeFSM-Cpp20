@@ -42,7 +42,6 @@ A compile-time, type-safe Finite State Machine (FSM) framework for C++20 that le
 ### Tested Compilers
 - GCC 10+ 
 - Clang 13+
-- MSVC 19.28+ (Visual Studio 2019 16.8+)
 
 ---
 
