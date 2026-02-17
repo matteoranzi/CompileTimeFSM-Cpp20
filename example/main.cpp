@@ -5,12 +5,10 @@
 
 FSM_States processInputEvent(const FSM_States& fsm, int inputEvent);
 
+[[noreturn]]
 int main() {
-    // TODO add a FSM_commit functionality (macro, function?) that generates the FSM state's variant automatically
-
     FSM_States fsm = FSM<s_init>{};
 
-    // ReSharper disable once CppDFAEndlessLoop
     while(true) {
         int inputEvent;
         std::cout << "Enter event (0: ready, 1: startTx, 2: startRx, 3: done, 4: error, 5: reset): ";
