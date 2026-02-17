@@ -437,7 +437,7 @@ Defines code to execute when exiting `state` (not called for critical events).
 NEW_ON_TICK_ACTION(state, { /* code */ })
 ```
 Defines code for periodic execution in `state` 
-(must be called manually via `FSM_On_Tick<state>::exec();`).
+(must be called manually via `FSM_On_Tick<state>::exec()`).
 
 ### Core Templates
 
