@@ -3,11 +3,11 @@
 
 #include "basic_fsm.hpp"
 
-FSM_States processInputEvent(const FSM_States& fsm, int inputEvent);
+basicFSM processInputEvent(const basicFSM& fsm, int inputEvent);
 
 [[noreturn]]
 int main() {
-    FSM_States fsm = FSM<s_init>{};
+    basicFSM fsm = FSM<s_init>{};
 
     while(true) {
         int inputEvent;
@@ -19,8 +19,8 @@ int main() {
     }
 }
 
-FSM_States processInputEvent(const FSM_States& fsm, const int inputEvent) {
-    return std::visit([&]<typename State>(State&& state) -> FSM_States {
+basicFSM processInputEvent(const basicFSM& fsm, const int inputEvent) {
+    return std::visit([&]<typename State>(State&& state) -> basicFSM {
 
         switch (inputEvent) {
         case 0:

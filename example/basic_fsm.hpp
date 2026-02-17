@@ -21,7 +21,7 @@ NEW_STATE(error);
 //FSM_All_States is a variant that can hold any of the FSM states.
 //This allows us to have a single variable that can represent the current state of the FSM, and we can use std::visit to handle events based on the current state.
 //FILL WITH ALL THE CREATED STATES
-using FSM_States = std::variant<
+using basicFSM = std::variant<
     FSM<s_init>,
     FSM<s_idle>,
     FSM<s_tx>,
